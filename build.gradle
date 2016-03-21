@@ -36,8 +36,10 @@ dependencies {
 }
 
 task stage() {
-    dependsOn clean, jar
+    dependsOn clean, build
 }
+
+build.mustRunAfter clean
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.12'
