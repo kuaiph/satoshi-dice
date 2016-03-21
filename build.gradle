@@ -35,6 +35,10 @@ dependencies {
     testCompile 'junit:junit'
 }
 
+task stage() {
+    dependsOn clean, jar
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.12'
 }
